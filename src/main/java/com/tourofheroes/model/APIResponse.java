@@ -12,7 +12,7 @@ public class APIResponse {
 	
 	@JsonProperty("error")
 	@JsonInclude(Include.NON_NULL)
-	private APIErrorResponse apiErrorResponse;
+	private APIErrorResponse<?> apiErrorResponse;
 	
 	@JsonInclude(Include.NON_NULL)
 	private Object data;
@@ -37,10 +37,10 @@ public class APIResponse {
 	public void setTimestamp(String timestamp) {
 		this.timestamp = timestamp;
 	}
-	public APIErrorResponse getError() {
+	public APIErrorResponse<?> getError() {
 		return apiErrorResponse;
 	}
-	public void setError(APIErrorResponse apiErrorResponse) {
+	public void setError(APIErrorResponse<?> apiErrorResponse) {
 		this.apiErrorResponse = apiErrorResponse;
 	}
 	public Object getData() {

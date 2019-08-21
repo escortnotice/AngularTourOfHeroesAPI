@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tourofheroes</groupId>
-	<artifactId>AngularTourOfHeroesAPI</artifactId>
+	<artifactId>ShubhamExceptionHandlingPOC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>AngularTourOfHeroesAPI</name>
-	<description>AngularTourOfHeroesAPI Backend Project</description>
+	<name>ShubhamExceptionHandlingPOC</name>
+	<description>ShubhamExceptionHandlingPOC Backend Project</description>
 
 	<properties>
 		<java.version>1.8</java.version>

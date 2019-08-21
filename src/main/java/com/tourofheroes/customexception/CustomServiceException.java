@@ -1,22 +1,17 @@
 package com.tourofheroes.customexception;
 
-import com.tourofheroes.constants.CustomErrorCodes;
+import com.tourofheroes.constantsandenums.CustomErrorCodeAndMessages;
 
 @SuppressWarnings("serial")
 public class CustomServiceException extends CustomBaseException {
 	
-	public CustomServiceException(String customMessage) {
-		super(customMessage);
+	public CustomServiceException ( CustomErrorCodeAndMessages customErrorCodesAndMessages, Throwable cause) {
+		super(customErrorCodesAndMessages, cause);
+	}
+	
+	public CustomServiceException ( CustomErrorCodeAndMessages customErrorCodesAndMessages) {
+		super(customErrorCodesAndMessages);
 	}
 
-	public CustomServiceException(String customMessage, Throwable cause) {
-		super(customMessage , cause);
-	}
-
-	//getters and setters
-	@Override
-	public String getErrorCustomCode() {
-		return CustomErrorCodes.BUSINESS_SERVICE_ERROR_CODE;
-	}
 
 }

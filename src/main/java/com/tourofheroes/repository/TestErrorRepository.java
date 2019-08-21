@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import com.tourofheroes.constants.CustomErrorMessages;
+import com.tourofheroes.constantsandenums.CustomErrorCodeAndMessages;
 import com.tourofheroes.customexception.CustomRepositoryException;
 
 @Repository
@@ -29,8 +29,8 @@ public class TestErrorRepository {
 		 * 2. Throw a custom exception with custom message to be propogated or displayed in UI
 		 */
 		catch(SQLException e) {
-			LOGGER.error(e.getMessage(),e);
-			throw new CustomRepositoryException(CustomErrorMessages.DATABASE_ERROR);
+			LOGGER.error(CustomErrorCodeAndMessages.DATABASE_ERROR.getErrorCodeAndMessage(), e.getMessage(),e);
+			throw new CustomRepositoryException(CustomErrorCodeAndMessages.DATABASE_ERROR);
 		}
 		
 	}

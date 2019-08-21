@@ -1,36 +1,25 @@
 package com.tourofheroes.customexception;
 
+import com.tourofheroes.constantsandenums.CustomErrorCodeAndMessages;
+
 @SuppressWarnings("serial")
 public class CustomBaseException extends Exception {
 
-	private String errorCustomMessage;
-	private String errorCustomCode;
+	private final CustomErrorCodeAndMessages customErrorCodeAndMessages;
 	
-	public CustomBaseException(String customMessage) {
-		super(customMessage);
-		this.errorCustomMessage = customMessage;
+	public CustomBaseException(CustomErrorCodeAndMessages customErrorCodeAndMessage, Throwable cause) {
+		super(customErrorCodeAndMessage.getErrorCodeAndMessage(), cause);
+		this.customErrorCodeAndMessages = customErrorCodeAndMessage;
 	}
-
-	public CustomBaseException(String customMessage, Throwable cause) {
-		super(customMessage, cause);
-		this.errorCustomMessage = customMessage;
+	
+	public CustomBaseException(CustomErrorCodeAndMessages customErrorCodeAndMessage) {
+		super(customErrorCodeAndMessage.getErrorCodeAndMessage());
+		this.customErrorCodeAndMessages = customErrorCodeAndMessage;
 	}
 
 	//getters and setters
-	public String getErrorCustomMessage() {
-		return errorCustomMessage;
-	}
-
-	public void setErrorCustomMessage(String errorCustomMessage) {
-		this.errorCustomMessage = errorCustomMessage;
-	}
-
-	public String getErrorCustomCode() {
-		return errorCustomCode;
-	}
-
-	public void setErrorCustomCode(String errorCustomCode) {
-		this.errorCustomCode = errorCustomCode;
+	public CustomErrorCodeAndMessages getCustomErrorCodeAndMessages() {
+		return customErrorCodeAndMessages;
 	}
 
 	
