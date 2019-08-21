@@ -14,6 +14,7 @@ public class APIResponse {
 	@JsonInclude(Include.NON_NULL)
 	private APIErrorResponse<?> apiErrorResponse;
 	
+	@JsonProperty("data")
 	@JsonInclude(Include.NON_NULL)
 	private Object data;
 	
