@@ -25,8 +25,8 @@ public class TestErrorRepository {
 		}
 		
 		/*
-		 * 1. Print the stack trace of the error if occured in repository layer
-		 * 2. Throw a custom exception with custom message to be propogated or displayed in UI
+		 * 1. Print the stack trace of the error
+		 * 2. Throw a custom exception with custom error-message and error-code passed as an enum object
 		 */
 		catch(SQLException e) {
 			LOGGER.error(CustomErrorCodeAndMessages.DATABASE_ERROR.getErrorCodeAndMessage(), e.getMessage(),e);

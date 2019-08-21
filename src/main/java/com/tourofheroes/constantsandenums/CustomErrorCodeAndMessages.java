@@ -14,7 +14,7 @@ public enum CustomErrorCodeAndMessages {
 	BAD_REQUEST(4000, "Bad Request"),
 	NOT_FOUND(4040, "Not found"),
 	
-	//Network Error (5XXX)
+	//Generic Backend Error (5XXX)
 	SERVER_ERROR(5000, "Error Occured At Server");
 	
 
