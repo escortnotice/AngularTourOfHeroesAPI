@@ -44,7 +44,7 @@ public class TestErrorService {
 	/*
 	 * 2. DB exception occurs when db layer is called, so the exception propogation is shown
 	 */
-	public void testRepoServiceException() throws CustomRepositoryException {
+	public void testRepoServiceException() throws CustomRepositoryException, CustomServiceException {
 
 		testErrorRepo.getDataFromDBonError();
 

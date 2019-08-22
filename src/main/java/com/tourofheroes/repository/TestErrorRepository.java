@@ -29,7 +29,7 @@ public class TestErrorRepository {
 		 * 2. Throw a custom exception with custom error-message and error-code passed as an enum object
 		 */
 		catch(SQLException e) {
-			LOGGER.error(CustomErrorCodeAndMessages.DATABASE_ERROR.getErrorCodeAndMessage(), e.getMessage(),e);
+			LOGGER.error(CustomErrorCodeAndMessages.DATABASE_ERROR.getErrorCodeAndMessage() ,e);
 			throw new CustomRepositoryException(CustomErrorCodeAndMessages.DATABASE_ERROR);
 		}
 		

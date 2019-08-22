@@ -6,6 +6,7 @@ public enum CustomErrorCodeAndMessages {
 	//Database Errors (1XXX)
 	QUERY_ERROR(1200, "Query Error"),
 	DATABASE_ERROR(1000, "Database Error Occured"),
+	DB_UNAVAILABLE_ERROR(1300, "DB is Not Available"),
 
 	//Business Service Errors (2XXX)
 	INVALID_INPUT_DATA(2001, "Invalid Input Data"),

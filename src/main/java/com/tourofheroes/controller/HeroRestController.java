@@ -53,8 +53,9 @@ public class HeroRestController {
 		heroRepo.updateHero(hero);
 	}
 	
-	@PostMapping("/hero")
+	@PostMapping(path="/hero")
 	@ResponseBody
+	@ResponseStatus(value= HttpStatus.CREATED)
 	public Hero addHero(@RequestBody Hero hero) {
 		return heroRepo.addHero(hero);
 	}
